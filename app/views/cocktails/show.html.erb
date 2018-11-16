@@ -2,7 +2,7 @@
 
 <h2>Ingredients : </h2>
 <ul>
-  <% @doses.each do |dose| %>
+  <% @cocktail.doses.each do |dose| %>
     <li><%= dose.ingredient.name %> (<%= dose.description %>) </li>
   <% end %>
 </ul>
@@ -13,4 +13,6 @@
   <%= f.input :description %>
   <%= f.button :submit %>
 <% end %>
+
+<button><%= link_to "See all cocktails", cocktails_path %></button>
 
